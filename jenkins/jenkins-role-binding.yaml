@@ -1,0 +1,15 @@
+# In GKE need to get RBAC permissions first with
+# kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=<your-email>
+
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: RoleBinding
+metadata:
+  name: jenkins
+  namespace: jenkins
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: jenkins
+subjects:
+- kind: ServiceAccount
+  name: jenkins
