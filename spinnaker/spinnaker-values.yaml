@@ -1,0 +1,26 @@
+ingress:
+  enabled: false
+
+kubeConfig:
+  enabled: false
+
+s3:
+  enabled: false
+
+rbac:
+  create: true
+
+minio:
+  enabled: true
+
+serviceAccount:
+  create: true
+
+spinnakerFeatureFlags:
+  - artifacts
+  - jobs
+
+dockerRegistries:
+- name: "dockerhub"
+  address: "index.docker.io"
+  dockerRegistryAccountSecret: dockerhub-secret
