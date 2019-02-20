@@ -1,0 +1,4 @@
+kibana:
+  enabled: true
+  env:
+    ELASTICSEARCH_URL: http://elk-elasticsearch-discovery:9200
